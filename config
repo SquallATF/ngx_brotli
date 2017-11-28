@@ -132,6 +132,7 @@ ngx_module_srcs="$brotli/common/dictionary.c \
                  $brotli/enc/utf8_util.c \
                  $ngx_addon_dir/src/ngx_http_brotli_filter_module.c"
 ngx_module_libs="-lm"
+
 ngx_module_order="$ngx_module_name \
                   ngx_pagespeed \
                   ngx_http_postpone_filter_module \
