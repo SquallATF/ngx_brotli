@@ -75,6 +75,7 @@ ngx_module_type=HTTP_FILTER
 ngx_module_name=ngx_http_brotli_filter_module
 ngx_module_incs="$brotli/include"
 ngx_module_deps="$brotli/common/constants.h \
+                 $brotli/common/context.h \
                  $brotli/common/dictionary.h \
                  $brotli/common/version.h \
                  $brotli/enc/backward_references.h \
@@ -91,7 +92,6 @@ ngx_module_deps="$brotli/common/constants.h \
                  $brotli/enc/command.h \
                  $brotli/enc/compress_fragment.h \
                  $brotli/enc/compress_fragment_two_pass.h \
-                 $brotli/enc/context.h \
                  $brotli/enc/dictionary_hash.h \
                  $brotli/enc/entropy_encode.h \
                  $brotli/enc/entropy_encode_static.h \
@@ -109,7 +109,6 @@ ngx_module_deps="$brotli/common/constants.h \
                  $brotli/enc/memory.h \
                  $brotli/enc/metablock.h \
                  $brotli/enc/metablock_inc.h \
-                 $brotli/enc/port.h \
                  $brotli/enc/prefix.h \
                  $brotli/enc/quality.h \
                  $brotli/enc/ringbuffer.h \
@@ -128,6 +127,7 @@ ngx_module_srcs="$brotli/common/dictionary.c \
                  $brotli/enc/compress_fragment_two_pass.c \
                  $brotli/enc/dictionary_hash.c \
                  $brotli/enc/encode.c \
+                 $brotli/enc/encoder_dict.c \
                  $brotli/enc/entropy_encode.c \
                  $brotli/enc/histogram.c \
                  $brotli/enc/literal_cost.c \
